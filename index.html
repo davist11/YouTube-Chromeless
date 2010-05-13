@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>YouTube Chromeless Video Player jQuery Plugin</title>
+    <meta http-equiv="Content-type" content="text/html; charset=utf-8" />
+    <script type="text/javascript" src="jquery.js"></script>
+    <script type="text/javascript" src="swfobject.js"></script>
+    <script type="text/javascript" src="jquery.ytchromeless.min.js"></script>
+    <script type="text/javascript">
+      $(document).ready(function() {
+        $('a.video-link').ytchromeless();
+      });
+    </script>
+    <style type="text/css">
+    .video-player { margin: 20px; width: 640px; }
+    .video-controls { 
+      background: #dedede; 
+      height: 30px;
+      margin: -4px 0 0;
+      position: relative;
+      width: 640px;
+    }
+    .status { height: 20px; left: 30px; position: absolute; top: 5px; width: 455px; }
+    .bar { background: #a4a4a4; height: 10px; position: relative; top: 5px; }
+    .loaded { background: #bbb; height: 10px; left: 0; position: absolute; top: 0; }
+    .indicator { background: #212121; display: block; height: 10px; left: 0; position: absolute; top: 0; width: 20px; }
+    .play-pause, .volume { 
+      background: url(images/btn-controls.png) no-repeat ;
+      display: block;
+      height: 20px;
+      overflow: hidden;
+      position: absolute;
+      text-indent: -9999px;
+      top: 5px;
+      width: 20px;
+    }
+    .play-pause { left: 5px; }
+    .playing { background-position: 0 -20px; }
+    .volume { background-position: 0 -60px; right: 130px; }
+    .muted { background-position: 0 -40px; }
+    .view-youtube { 
+      color: #000;
+      display: block; 
+      float: right; 
+      font-size: 9px; 
+      line-height: 30px;
+      padding: 0 5px 0 0;
+      text-decoration: none;
+      text-transform: uppercase;
+    }
+    </style>
+  </head>
+  <body>
+    <h1>YouTube Chromeless Video Player jQuery Plugin</h1>
+    <a class="video-link" href="http://www.youtube.com/watch?v=sxUjB3Q04rQ">Bolt Arms - Around the World</a>
+
+    <a class="video-link" href="http://www.youtube.com/watch?v=vtw1U9VxoGE">PUMA's Sprint Your Halls Off- Week 1: GOOGLE</a>
+        
+  </body>
+</html>

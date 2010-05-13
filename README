@@ -1,0 +1,21 @@
+A jQuery plugin to hook into the YouTube Chromeless Video API.
+
+Sample Usage:
+<a href="http://www.youtube.com/watch?v=sxUjB3Q04rQ" class="video-link">Bolt Arms - Around the World</a>
+
+$(document).ready(function() {
+  $('a.video-link').ytchromeless();
+});
+
+
+Requirements:
+- jQuery: http://jquery.com/
+- SWFObject: http://code.google.com/p/swfobject/
+- YouTube Chromeless Video Plugin: http://github.com/davist11/YouTube-Chromeless
+
+
+Options:
+- videoWidth : '640'
+- videoHeight : '360'
+- videoIdBase : 'ytplayer'
+- params : { allowScriptAccess: 'always', wmode: 'transparent' }

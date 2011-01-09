@@ -7,7 +7,7 @@
  * Uses the same license as jQuery, see:
  * http://jquery.org/license
  *
- * @version 0.2
+ * @version 0.3
  */
  
 (function($) {
@@ -29,14 +29,14 @@
       
       // initial var setup
       
-        var options    = $.extend(config, options),
+        var o    = $.extend(config, options),
       
             // set jQuery objects
             $link      = $(this),
 
             // set variables          
             url        = $link.attr('href'),
-            videoId    = $link.attr('id') || options.videoIdBase + i,
+            videoId    = $link.attr('id') || o.videoIdBase + i,
             ytVideoId  = url.substr(31),
 
             // new DOM elements
@@ -178,12 +178,12 @@
     		  swfobject.embedSWF(
             'http://www.youtube.com/apiplayer?&enablejsapi=1&playerapiid=' + videoId,
             videoId, 
-            options.videoWidth, 
-            options.videoHeight, 
+            o.videoWidth, 
+            o.videoHeight, 
             '8', 
             null, 
             null, 
-            options.params, 
+            o.params, 
             { id: videoId },
             function(){
               player = document.getElementById( videoId );

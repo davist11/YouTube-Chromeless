@@ -139,8 +139,8 @@
               $video.pause();
             }
 
-            if( player.getVideoBytesLoaded() > -1) {
-              var loadedAmount = ( player.getVideoBytesLoaded() / player.getVideoBytesTotal())  * 100;
+            if( player.getVideoLoadedFraction() > 0) {
+              var loadedAmount = Math.round(Math.min(player.getVideoLoadedFraction(), 1) * 100);
               $loaded.css( 'width', loadedAmount + '%' );
             }
             
@@ -176,7 +176,7 @@
     		$video.init = function() {
   		  
     		  swfobject.embedSWF(
-            'http://www.youtube.com/apiplayer?&enablejsapi=1&playerapiid=' + videoId,
+            'http://www.youtube.com/apiplayer?version=3&enablejsapi=1&playerapiid=' + videoId,
             videoId, 
             o.videoWidth, 
             o.videoHeight, 
